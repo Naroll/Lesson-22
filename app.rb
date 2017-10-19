@@ -28,3 +28,6 @@ get '/about' do
   erb :about
 end
 
+get '/visit' do
+  erb :visit
+end

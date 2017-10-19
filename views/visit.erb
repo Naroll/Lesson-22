@@ -1,22 +1,38 @@
-<h2>Записаться</h2>
-<p>На этой странице вы можете записаться</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Запись</title>
+</head>
+<body>
+	<h2>Записаться</h2>
+	<p>На этой странице вы можете записаться</p>
 
-<form action="/visit" method="post">
-  
-  <div class="form-group">
-    <label>Ваше имя</label>
-    <input name="username" type="text" class="form-control" id="exampleInputEmail1" placeholder="Введите ваше имя">
-  </div>
-  
-	<div class="form-group">
-    <label>Ваш телефон</label>
-    <input name="phone" type="text" class="form-control" id="exampleInputEmail1" placeholder="Введите ваш телефон">
-  </div>
+	<form action="/visit" method="post">
 
-  <div class="form-group">
-    <label>Время записи</label>
-    <input name="datetime" type="text" class="form-control" id="exampleInputEmail1" placeholder="Введите дату и время">
-  </div>
-	
-  <button type="submit" class="btn btn-primary">Записаться</button>
-</form>
+		<select name="mastername" class="form-control" >
+		  <option>-</option>
+		  <option>Рафик</option>
+		  <option>Ашот</option>
+		  <option>Дильшот</option>
+		</select>
+	  
+	  <div class="form-group">
+	    <label>Ваше имя</label>
+	    <input name="username" type="text" class="form-control" id="exampleInputEmail1" placeholder="Введите ваше имя">
+	  </div>
+	  
+		<div class="form-group">
+	    <label>Ваш телефон</label>
+	    <input name="phone" type="text" class="form-control" id="exampleInputEmail1" placeholder="Введите ваш телефон">
+	  </div>
+
+	  <div class="form-group">
+	    <label>Время записи</label>
+	    <input name="datetime" type="text" class="form-control" id="exampleInputEmail1" placeholder="Введите дату и время">
+	  </div>
+		
+	  <button type="submit" class="btn btn-primary">Записаться</button>
+	</form>
+</body>
+</html>

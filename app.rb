@@ -31,3 +31,31 @@ end
 get '/visit' do
   erb :visit
 end
+
+post '/visit' do
+  @mastername = params[:mastername]
+  @username = params[:username]
+  @phone = params[:phone]
+  @datetime = params[:datetime]
+
+  f = File.open './public/users.txt', 'a'
+  #chmod 666 users.txt
+  f.write "User: #{@username}, phone: #{@phone}, date and time #{@datetime}, master #{@mastername}\n"
+  f.close
+  erb :visit
+end
+
+get '/contacts' do
+  erb :contacts
+end
+
+post '/contacts' do
+  @email = params[:email]
+  @message = params[:message]
+
+  f = File.open './public/contacts.txt', 'a'
+  #chmod 666 users.txt
+  f.write "E-mail: #{@email}, message: #{@message}\n"
+  f.close
+  erb :contacts
+end

@@ -1,0 +1,6 @@
+User: Сергей, phone: 123123, date and time 12 октября
+User: Михаил, phone: 8-923-236-65-65, date and time 13 марта
+User: Евгнат, phone: 8-927-258-54-56, date and time 16 апреля
+User: Игорь, phone: 8-963-96-33-33, date and time 14 декабря
+User: Евгнат, phone: 8-902-963-22-11, date and time 16 апреля, master Ашот
+User: user, phone: 8-923-236-65-65, date and time 16 апреля, master Рафик

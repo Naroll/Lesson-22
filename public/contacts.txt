@@ -1,3 +1,5 @@
 E-mail: asd@gmail.com, message: Какое-то сообщение.
 E-mail: qwerty@ya.ru, message: Это совсем другое сообщение.
 В сообщение использовали пробел!
+E-mail: , message: 
+E-mail: ыыы, message: 

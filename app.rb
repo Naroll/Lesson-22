@@ -64,9 +64,18 @@ post '/contacts' do
   @email = params[:email]
   @message = params[:message]
 
+  hh = { :email => 'Введите ваш email', :message => 'Введите ваше сообщение'}
+
+  #Формирование сообщения об ошибке
+  @error = hh.select {|key,_| params[key] == ''}.values.join(', ')
+
+  if @error !=''
+    return erb :contacts
+  end
+
   f = File.open './public/contacts.txt', 'a'
   #chmod 666 users.txt
   f.write "E-mail: #{@email}, message: #{@message}\n"
   f.close
-  erb :contacts
+  redirect '/contacts'
 end

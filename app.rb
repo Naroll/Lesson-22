@@ -25,6 +25,7 @@ get '/' do
 end
 
 get '/about' do
+  @error = 'something wrong!'
   erb :about
 end
 
@@ -38,11 +39,21 @@ post '/visit' do
   @phone = params[:phone]
   @datetime = params[:datetime]
 
+  #Добавляем хэш с сообщениями об ошибках
+  hh = { :username => 'Введите имя', :phone => 'Введите телефон', :datetime => 'Введите дату'}
+
+  #Формирование сообщения об ошибке
+  @error = hh.select {|key,_| params[key] == ''}.values.join(', ')
+
+  if @error !=''
+    return erb :visit 
+  end
+
   f = File.open './public/users.txt', 'a'
   #chmod 666 users.txt
   f.write "User: #{@username}, phone: #{@phone}, date and time #{@datetime}, master #{@mastername}\n"
   f.close
-  erb :visit
+  redirect '/visit'
 end
 
 get '/contacts' do

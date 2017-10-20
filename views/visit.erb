@@ -22,17 +22,17 @@
 	  
 	  <div class="form-group">
 	    <label>Ваше имя</label>
-	    <input name="username" type="text" class="form-control" id="exampleInputEmail1" placeholder="Введите ваше имя">
+	    <input name="username" type="text" class="form-control" id="exampleInputEmail1" placeholder="Введите ваше имя" value="<%= @username%>">
 	  </div>
-	  
+	 
 		<div class="form-group">
 	    <label>Ваш телефон</label>
-	    <input name="phone" type="text" class="form-control" id="exampleInputEmail1" placeholder="Введите ваш телефон">
+	    <input name="phone" type="text" class="form-control" id="exampleInputEmail1" placeholder="Введите ваш телефон" value="<%= @phone%>">
 	  </div>
 
 	  <div class="form-group">
 	    <label>Время записи</label>
-	    <input name="datetime" type="text" class="form-control" id="exampleInputEmail1" placeholder="Введите дату и время">
+	    <input name="datetime" type="text" class="form-control" id="exampleInputEmail1" placeholder="Введите дату и время" value="<%= @datetime%>">
 	  </div>
 		
 	  <button type="submit" class="btn btn-primary">Записаться</button>
